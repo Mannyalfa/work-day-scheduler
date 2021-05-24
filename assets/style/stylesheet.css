@@ -1,99 +1,133 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-  background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    /*background-color: #000000;*/
+    background-image: url("C:/Users/Owner/Documents/UCF/challenges/work-day-scheduler/assets/images/circuit-board.jpg");
+
+  }
+  
+  .jumbotron {
+    text-align: center;
+    color:white;
+    border-radius: 0;
+    margin-bottom: 0px;
+    background-image: url("C:/Users/Owner/Documents/UCF/challenges/work-day-scheduler/assets/images/circuit-board.jpg");
+    font-family: 'Public Sans', sans-serif;
+  }
+
+  h1 {
+    font-size: 5em;
+    color: #fff;
+    animation: glitch 0.5s linear infinite;
+  }
+  @keyframes glitch {
+    0%, 100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: .9;
+    }
+    50% {
+      opacity: .8;
+    }
+    75% {
+      opacity: .7;
+    }
+  }
+
+  header h3 .you {
+    font-style: italic;
+    text-decoration: underline;
 }
 
-header {
+#currentDay {
+    font-size: xx-large;
+    font-weight: bold;
+    color: lightskyblue;
 
 }
 
-h1{
-  font-weight: bolder;
-  color: white;
-}
 
-.lead {
-  font-weight: bold;
-  color: white;
- 
-}
 
-h3 {
-  font-weight: bold;
-  color: white;
+  main {
+    background-image: url("C:/Users/Owner/Documents/UCF/challenges/work-day-scheduler/assets/cubes.jpg");
 
-}
+  }
+  
+  .description{
+    white-space: pre-wrap;
+    color: lightgray;
+  }
+  
+  .time-block{
+    text-align: center;
+    border-radius: 15px;
+  }
 
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
 
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: right;
-  border-radius: 15px;
-  border-color: black;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid rgb(146, 142, 142);;
-}
-
-.hour {
-  background-color:lightgrey;
-  color: #000000;
-  font-size: larger;
-  border-top: 1px solid #000000;
-  padding-top: 10px;
-}
-
-textarea {
-  height: 79px;
-  margin-top: 0px;
-  background: transparent;
-  resize: none;
-  color: #000000;
-  background-color: white;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-color: black;
-  background-color: gray;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
+  
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px transparent;
+  }
+  
+  .hour {
+    background-color: lightgray;
+    color: black;
+    border-top: 1px solid black;
+    width: 120px;
+    margin-left: -20px;
+    margin-bottom: 5px;
+    text-align: right;
+    padding: 5px;
+   }
+  
+  textarea {
+    height: 79px;
+    margin-top: 0px;
+    background: transparent;
+    resize: none;
+    color: #000000;
+    background-color: white;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: white;
+  }
+  
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(49, 51, 51);
+    color: rgb(216, 209, 209);
+    margin-bottom: 5px;
+    border-bottom: solid black;
+    height: 79px;
+  }
+  
+  
+  .saveBtn:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+  
+  .saveBtn:active, .saveBtn:focus {
+    outline: 5px;
+  }
