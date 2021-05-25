@@ -44,7 +44,7 @@ body {
 #currentDay {
     font-size: xx-large;
     font-weight: bold;
-    color: lightskyblue;
+    color: rgb(181, 221, 247);
 
 }
 
@@ -152,5 +152,16 @@ body {
     margin-top: 25px;
     font-size: medium;
     font-weight: bold;
+    color:darkred;
     background-color: darkgrey;
   }
+
+#warning{
+  text-align: center;
+  color: white;
+}
+
+.aviso {
+  color: red;
+  text-decoration: underline;
+}

@@ -1,5 +1,5 @@
 // Get current date
-$("#currentDay").text(moment().format("dddd, MMMM Do"));
+$("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
 
 //Toggle 12/24 hour time mode
 $(function(){
