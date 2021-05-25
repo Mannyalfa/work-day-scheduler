@@ -149,7 +149,7 @@ body {
   
   #reset-button {
     padding: 5px;
-    margin-top: 25px;
+    margin: 15px;
     font-size: medium;
     font-weight: bold;
     color:darkred;
@@ -159,9 +159,11 @@ body {
 #warning{
   text-align: center;
   color: white;
+  padding-bottom: 25px;
 }
 
 .aviso {
   color: red;
   text-decoration: underline;
+  
 }
