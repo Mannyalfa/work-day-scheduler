@@ -1,29 +1,23 @@
-// this function displays the current date and time
-setInterval(function () {
-    $("#currentDay").text(moment().format("Do MMMM YYYY, h:mm:ss A"));
-}, 1000)
-
 
 $(document).ready(function () {
     $("#currentDay").text(moment().format("dddd MMMM Do, YYYY hh:mm A"));
     $(".saveBtn").on("click", function () {
     console.log(this);
-    var text = $(this).siblings(".agenda").val(); 
+    var text = $(this).siblings(".description").val(); 
     var time = $(this).parent().attr("id"); 
-
     //set items in local storage.
     localStorage.setItem(time, text);
     })
     //load data from LocalStorage.
-    $("#9hr .agenda").val(localStorage.getItem("9hr"));
-    $("#10hr .agenda").val(localStorage.getItem("10hr"));
-    $("#11hr .agenda").val(localStorage.getItem("11hr"));
-    $("#12hr .agenda").val(localStorage.getItem("12hr"));
-    $("#13hr .agenda").val(localStorage.getItem("13hr"));
-    $("#14hr .agenda").val(localStorage.getItem("14hr"));
-    $("#15hr .agenda").val(localStorage.getItem("15hr"));
-    $("#16hr .agenda").val(localStorage.getItem("16hr"));
-    $("#17hr .agenda").val(localStorage.getItem("17hr"));
+    $("#9hr .description").val(localStorage.getItem("9hr"));
+    $("#10hr .description").val(localStorage.getItem("10hr"));
+    $("#11hr .description").val(localStorage.getItem("11hr"));
+    $("#12hr .description").val(localStorage.getItem("12hr"));
+    $("#13hr .description").val(localStorage.getItem("13hr"));
+    $("#14hr .description").val(localStorage.getItem("14hr"));
+    $("#15hr .description").val(localStorage.getItem("15hr"));
+    $("#16hr .description").val(localStorage.getItem("16hr"));
+    $("#17hr .description").val(localStorage.getItem("17hr"));
 
     function trackHours() {
     //get current hour.
@@ -61,7 +55,7 @@ $("#currentDay").text(moment().format("dddd MMMM Do h:mm a"));
 }, 1000)
 //Display current time in 24 hour format
 setInterval(function () {
-$("#currentAlt").text(moment().format("dddd DD MMMM HH:mm"));
+$("#currentAlt").text(moment().format("dddd DD MMMM HH:mm:ss"));
 }, 1000)
 
 //Toggle 12/24 hour time mode
@@ -76,7 +70,7 @@ $('p.ampm, p.mil').toggle();
 
 //Delete session storage and all user text
 $("#reset-buttton").on('click', function(){
-    localStorage.clear();
-    });
+localStorage.clear();
+});
     
     

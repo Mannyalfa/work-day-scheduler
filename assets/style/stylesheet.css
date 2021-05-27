@@ -97,7 +97,7 @@ body {
 
   .time-label {
     background-color: rgb(20, 20, 20);
-    border: none;
+    border-right: solid darkgray 1px;
     color: white;
     text-align: center;
     padding-top: 10px;
@@ -120,6 +120,7 @@ body {
     color: white;
     text-align: center;
     padding-top: 10px;
+
   }
 
   
@@ -166,6 +167,8 @@ body {
     color: white;
     text-align: center;
     padding-top: 10px;
+    border-left: solid darkgray 1px;
+
   }
 
   
