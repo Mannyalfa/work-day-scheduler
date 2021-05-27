@@ -1,42 +1,81 @@
+// this function displays the current date and time
+setInterval(function () {
+    $("#currentDay").text(moment().format("Do MMMM YYYY, h:mm:ss A"));
+}, 1000)
+
+
 $(document).ready(function () {
-var events = [];
+    $("#currentDay").text(moment().format("dddd MMMM Do, YYYY hh:mm A"));
+    $(".saveBtn").on("click", function () {
+    console.log(this);
+    var text = $(this).siblings(".details").val(); 
+    var time = $(this).parent().attr("id"); 
 
-//Set saveBtn/click listener for text input
-$(".saveBtn").on("click", function () {
-//Get values
-var text = $(this).siblings(".details").val();
-var time = $(this).parent().attr("id");
-var dateAdd = moment().format("dddd, MMMM Do");
+    //set items in local storage.
+    localStorage.setItem(time, text);
+    })
+    //load data from LocalStorage.
+    $("#9hr .details").val(localStorage.getItem("9hr"));
+    $("#10hr .details").val(localStorage.getItem("10hr"));
+    $("#11hr .details").val(localStorage.getItem("11hr"));
+    $("#12hr .details").val(localStorage.getItem("12hr"));
+    $("#13hr .details").val(localStorage.getItem("13hr"));
+    $("#14hr .details").val(localStorage.getItem("14hr"));
+    $("#15hr .details").val(localStorage.getItem("15hr"));
+    $("#16hr .details").val(localStorage.getItem("16hr"));
+    $("#17hr .details").val(localStorage.getItem("17hr"));
 
-events.push({description: value, time: time, date: dateAdd});
+    function trackHours() {
+    //get current hour.
+    var currentHour = moment().hour(); // use of moment.js
 
-//Store time(s) in local storage
-localStorage.setItem(time, text);
+    // loop time slots
+    $(".time-slot").each(function () {
+    var slotHour = parseInt($(this).attr("id").split("hour")[1]);
+    console.log( slotHour, currentHour)
+
+    //check time slots
+    if (slotHour < currentHour) {
+    $(this).addClass("past");
+    $(this).removeClass("future");
+    $(this).removeClass("present");
+    }
+    else if (slotHour === currentHour) {
+    $(this).removeClass("past");
+    $(this).addClass("present");
+    $(this).removeClass("future");
+    }
+    else {
+    $(this).removeClass("present");
+    $(this).removeClass("past");
+    $(this).addClass("future");
+    }
+    })
+    }
+    trackHours(); //re-run function
 });
-// Set Rows and detailed text area
-$("#9hr .details").val(localStorage.getItem("#9hr"));
-$("#10hr .details").val(localStorage.getItem("#10hr"));
-$("#11hr .details").val(localStorage.getItem("#11hr"));
-$("#12hr .details").val(localStorage.getItem("#12hr"));
-$("#13hr .details").val(localStorage.getItem("#13hr"));
-$("#14hr .details").val(localStorage.getItem("#14hr"));
-$("#15hr .details").val(localStorage.getItem("#15h"));
-$("#16hr .details").val(localStorage.getItem("#16hr"));
-$("#17hr .details").val(localStorage.getItem("#17hr"));
 
 
-function TrackHrs() {
-//get current number of hours.
-var currentHour = moment().hour(); // use of moment.js
 
+//Display current time in 24 hour format
+setInterval(function () {
+$("#currentAlt").text(moment().format("dddd MMMM Do, YYYY  HH:mm:ss"));
+}, 1000)
 
 //Toggle 12/24 hour time mode
 $(function(){
-$('p.mil').hide();// hide it initially
+$('p.mil').hide();
+$('p.mil').hide();
 $('#toggle').on('click', function(){
 $('p.ampm, p.mil').toggle();
 });
 });
 
-// Display current day using moment.js
-$("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
+$(function(){
+$('#currentAlt').hide();
+$('#currentAlt').hide();
+$('#toggle').on('click', function(){
+$('#currentAlt, #currentDay').toggle();
+});
+});
+    
