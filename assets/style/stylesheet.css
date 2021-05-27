@@ -70,27 +70,38 @@ body {
     background-color: rgb(76, 80, 80);
 
   }
-
-
-
   
   .row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px transparent;
   }
+
+  .marker {
+    white-space: pre-wrap;
+    height: 40px;
+    font: size 25px;
+    background-color: rgb(20, 20, 20);
+    border:solid darkgray 1px;
+  }
   
 .col-1 {
-    background-color: lightgray;
+    background-color: rgb(138, 133, 133);
     color: black;
     border-top: 1px solid black;
     width: 120px;
-    margin-left: -20px;
     margin-bottom: 5px;
     text-align: right;
     padding: 5px;
   }
 
+  .time-label {
+    background-color: rgb(20, 20, 20);
+    border: none;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+  }
  
   
   textarea {
@@ -99,10 +110,18 @@ body {
     background: transparent;
     resize: none;
     color: #000000;
-    background-color: white;
     border-left: 1px solid black;
     padding: 10px;
   }
+
+  .text-label {
+    background-color:  rgb(20, 20, 20);
+    border: none;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+  }
+
   
   .past {
     background-color: #d3d3d3;
@@ -140,6 +159,15 @@ body {
   .saveBtn:active, .saveBtn:focus {
     outline: 5px;
   }
+
+  .button-label {
+    background-color: rgb(20, 20, 20);
+    border: none;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+  }
+
   
   .reset-container {
     display: flex;
