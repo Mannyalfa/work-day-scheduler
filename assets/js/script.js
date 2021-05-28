@@ -9,16 +9,17 @@ $(document).ready(function () {
 		events.push({ description: text, time: time, date: dateTime });
 		//set items in local storage.
 		localStorage.setItem("events", JSON.stringify(events));
+
 	});
 
 	function timeCheck() {
 		//get current hour
 		var currentHour = moment().hour();
-
+		console.log("hello");
 		//check time blocks
 		$(".time-block").each(function () {
 			var blockHour = parseInt($(this).attr("id").split("-")[1]);
-
+			console.log(blockHour);
 			if (blockHour < currentHour) {
 				$(this).addClass("past");
 			} else if (blockHour === currentHour) {
@@ -28,7 +29,8 @@ $(document).ready(function () {
 			}
 		});
 	}
-	//recurring update time @ 60 second intervals
+
+
 	timeCheck();
 	var timeLeft = 60;
 	function getTime() {
@@ -41,6 +43,7 @@ $(document).ready(function () {
 			}
 		}, 1000);
 	}
+
 	getTime();
 });
 
