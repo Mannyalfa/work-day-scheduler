@@ -9,7 +9,6 @@ $(document).ready(function () {
 		events.push({ description: text, time: time, date: dateTime });
 		//set items in local storage.
 		localStorage.setItem("events", JSON.stringify(events));
-
 	});
 
 	function timeCheck() {
@@ -30,7 +29,6 @@ $(document).ready(function () {
 		});
 	}
 
-
 	timeCheck();
 	var timeLeft = 60;
 	function getTime() {
@@ -45,11 +43,10 @@ $(document).ready(function () {
 	}
 
 	getTime();
-});
 
-//reset for loop
+	//reset for loop
 
-/*var currentDay = moment().format("dddd, MMMM Do");
+	/*var currentDay = moment().format("dddd, MMMM Do");
 for(var i = 0; i < events.length; i++) {
 if(currentDay.isAfter(events[i].date)) {
 events[i].description = "";
@@ -70,27 +67,28 @@ $("#" + events[i].time).children(".description").text(savedDescription);
 }
 */
 
-//Display current time in 12 hour format
-setInterval(function () {
-	$("#currentDay").text(moment().format("dddd MMMM Do h:mm a"));
-}, 1000);
+	//Display current time in 12 hour format
+	setInterval(function () {
+		$("#currentDay").text(moment().format("dddd MMMM Do h:mm a"));
+	}, 1000);
 
-//Display current time in 24 hour format
-setInterval(function () {
-	$("#currentAlt").text(moment().format("dddd DD MMMM HH:mm:ss"));
-}, 1000);
+	//Display current time in 24 hour format
+	setInterval(function () {
+		$("#currentAlt").text(moment().format("dddd DD MMMM HH:mm:ss"));
+	}, 1000);
 
-//Toggle 12/24 hour time mode
-$(function () {
-	$("p.mil").hide();
-	$("#currentAlt").hide();
-	$("#toggle").on("click", function () {
-		$("#currentAlt, #currentDay").toggle();
-		$("p.ampm, p.mil").toggle();
+	//Toggle 12/24 hour time mode
+	$(function () {
+		$("p.mil").hide();
+		$("#currentAlt").hide();
+		$("#toggle").on("click", function () {
+			$("#currentAlt, #currentDay").toggle();
+			$("p.ampm, p.mil").toggle();
+		});
 	});
-});
 
-//Delete session storage and all user text
-$("#reset-button").on("click", function () {
-	localStorage.clear();
+	//Delete session storage and all user text
+	$("#reset-button").on("click", function () {
+		localStorage.clear();
+	});
 });
