@@ -1,200 +1,190 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: bold;
-    background-image: url("../images/circuit-board.jpg");
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: bold;
+	background-image: url("../images/circuit-board.jpg");
+}
 
-  }
-  
-  .jumbotron {
-    text-align: center;
-    color:white;
-    padding: 2rem;
-    border-radius: 0;
-    margin-bottom: 0px;
-    background-image: url("../images/circuit-board.jpg");
-    font-family: 'Public Sans', sans-serif;
-  }
+.jumbotron {
+	text-align: center;
+	color: white;
+	padding: 2rem;
+	border-radius: 0;
+	margin-bottom: 0px;
+	background-image: url("../images/circuit-board.jpg");
+	font-family: "Public Sans", sans-serif;
+}
 
-  h1 {
-    font-size: 5em;
-    color: #fff;
-    animation: glitch 0.5s linear infinite;
-  }
-  @keyframes glitch {
-    0%, 100% {
-      opacity: 1;
-    }
-    25% {
-      opacity: .9;
-    }
-    50% {
-      opacity: .8;
-    }
-    75% {
-      opacity: .7;
-    }
-  }
+h1 {
+	font-size: 5em;
+	color: #fff;
+	animation: glitch 0.5s linear infinite;
+}
+@keyframes glitch {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0.9;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	75% {
+		opacity: 0.7;
+	}
+}
 
-  header h3 .you {
-    font-style: italic;
-    text-decoration: underline;
+header h3 .you {
+	font-style: italic;
+	text-decoration: underline;
 }
 
 .lead {
-    font-size: xx-large;
-    font-weight: bold;
-    color: rgb(181, 221, 247);
-
+	font-size: xx-large;
+	font-weight: bold;
+	color: rgb(181, 221, 247);
 }
 
-  
-  .marquee{
-    white-space: pre-wrap;
-    color: lightgray;
-  }
-  
-  .time-block{
-    text-align: center;
-    border-radius: 15px;
-    display: inline;
-  }
+.marquee {
+	white-space: pre-wrap;
+	color: lightgray;
+}
 
-  #toggle {
-    padding: 5px;
-    margin-top: 10px;
-    font-size: medium;
-    font-weight: bold;
-    color: white;
-    background-color: rgb(76, 80, 80);
+.time-block {
+	text-align: center;
+	border-radius: 15px;
+}
 
-  }
-  
-  .row {
-    white-space: pre-wrap;
-    height: 80px;
-    border-top: 1px transparent;
-  }
+#toggle {
+	padding: 5px;
+	margin-top: 10px;
+	font-size: medium;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(76, 80, 80);
+}
 
-  .marker {
-    white-space: pre-wrap;
-    height: 40px;
-    font: size 25px;
-    background-color: rgb(20, 20, 20);
-    border:solid darkgray 1px;
-  }
-  
+.row {
+	white-space: pre-wrap;
+	height: 80px;
+	border-top: 1px transparent;
+}
+
+.marker {
+	white-space: pre-wrap;
+	height: 40px;
+	font: size 25px;
+	background-color: rgb(20, 20, 20);
+	border: solid darkgray 1px;
+}
+
 .col-1 {
-    background-color: rgb(138, 133, 133);
-    color: black;
-    border-top: 1px solid black;
-    width: 120px;
-    margin-bottom: 5px;
-    text-align: right;
-    padding: 5px;
-  }
+	background-color: rgb(138, 133, 133);
+	color: black;
+	border-top: 1px solid black;
+	width: 120px;
+	margin-bottom: 5px;
+	text-align: center;
+	padding-top: 20px;
+}
 
-  .time-label {
-    background-color: rgb(20, 20, 20);
-    border-right: solid darkgray 1px;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-  }
- 
-  
-  textarea {
-    height: 79px;
-    margin-top: 0px;
-    background: transparent;
-    resize: none;
-    color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
-  }
+.time-label {
+	background-color: rgb(20, 20, 20);
+	border-right: solid darkgray 1px;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
 
-  .text-label {
-    background-color:  rgb(20, 20, 20);
-    border: none;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
+textarea {
+	height: 79px;
+	margin-top: 0px;
+	background: transparent;
+	resize: none;
+	color: #000000;
+	border-left: 1px solid black;
+	padding: 10px;
+}
 
-  }
+.text-label {
+	background-color: rgb(20, 20, 20);
+	border: none;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
 
-  
-  .past {
-    background-color: #d3d3d3;
-    color: white;
-  }
-  
-  .present {
-    background-color: #ff6961;
-    color: white;
-  }
-  
-  .future {
-    background-color: #77dd77;
-    color: white;
-  }
-  
-  .saveBtn {
-    text-align: center;
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: rgb(76, 80, 80);
-    color: rgb(216, 209, 209);
-    margin-bottom: 5px;
-    border-bottom: solid black;
-    height: 79px;
-  }
-  
-  
-  .saveBtn:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-  }
-  
-  .saveBtn:active, .saveBtn:focus {
-    outline: 5px;
-  }
+.past {
+	background-color: #d3d3d3;
+	color: white;
+}
 
-  .button-label {
-    background-color: rgb(20, 20, 20);
-    border: none;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    border-left: solid darkgray 1px;
+.present {
+	background-color: #ff6961;
+	color: white;
+}
 
-  }
+.future {
+	background-color: #77dd77;
+	color: white;
+}
 
-  
-  .reset-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #reset-button {
-    padding: 5px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-size: medium;
-    font-weight: bold;
-    color: white;
-    background-color: rgb(76, 80, 80);
-  }
+.saveBtn {
+	text-align: center;
+	border-left: 1px solid black;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: rgb(76, 80, 80);
+	color: rgb(216, 209, 209);
+	margin-bottom: 5px;
+	border-bottom: solid black;
+	height: 79px;
+}
 
-#warning{
-  text-align: center;
-  color: white;
-  padding-bottom: 25px;
+.saveBtn:hover {
+	font-size: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.saveBtn:active,
+.saveBtn:focus {
+	outline: 5px;
+}
+
+.button-label {
+	background-color: rgb(20, 20, 20);
+	border: none;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	border-left: solid darkgray 1px;
+}
+
+.reset-container {
+	display: flex;
+	justify-content: center;
+}
+
+#reset-button {
+	padding: 5px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	font-size: medium;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(76, 80, 80);
+}
+
+#warning {
+	text-align: center;
+	color: white;
+	padding-bottom: 25px;
 }
 
 .aviso {
-  color: red;
-  text-decoration: underline;
-  
+	color: red;
+	text-decoration: underline;
 }
