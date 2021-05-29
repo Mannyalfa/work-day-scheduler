@@ -1,4 +1,3 @@
-//
 $(document).ready(function () {
 	var events = [];
 
@@ -9,26 +8,26 @@ $(document).ready(function () {
 		events.push({ description: text, time: time, date: dateTime });
 		//set items in local storage.
 		localStorage.setItem("events", JSON.stringify(events));
+		if (text === "") {
+			alert("You have not made an entry. Please enter an event or appointment");
+		}
 	});
-
+	//compare current time to block hours
+	var currentTime = moment().hours();
+	var hour = $(this).parent().attr("id");
 	function timeCheck() {
-		//get current hour
-		var currentHour = moment().hour();
-		console.log("hello");
-		//check time blocks
-		$(".time-block").each(function () {
-			var blockHour = parseInt($(this).attr("id").split("-")[1]);
-			console.log(blockHour);
-			if (blockHour < currentHour) {
-				$(this).addClass("past");
-			} else if (blockHour === currentHour) {
-				$(this).addClass("present");
-			} else {
-				$(this).addClass("future");
-			}
-		});
+		//get current time using moment.js
+		if (hour < currentTime) {
+			$(this).addClass("past");
+		} else if (hour == currentTime) {
+			$(this).addClass("present");
+			$(this).removeClass("past");
+		} else {
+			$(this).addClass("future");
+			$(this).removeClass("present");
+			$(this).removeClass("past");
+		}
 	}
-
 	timeCheck();
 	var timeLeft = 60;
 	function getTime() {
@@ -43,29 +42,6 @@ $(document).ready(function () {
 	}
 
 	getTime();
-
-	//reset for loop
-
-	/*var currentDay = moment().format("dddd, MMMM Do");
-for(var i = 0; i < events.length; i++) {
-if(currentDay.isAfter(events[i].date)) {
-events[i].description = "";
-events[i].time = "";
-events[i].date = "";
-events.length = 0;
-}
-}
- // load any saved data from localStorage
-var savedEvents = JSON.parse(localStorage.getItem("events"));
-
-if (savedEvents !== null) {
-events = savedEvents;
-}
-for(var i = 0; i < events.length; i++) {
-var savedDescription = events[i].description;
-$("#" + events[i].time).children(".description").text(savedDescription);
-}
-*/
 
 	//Display current time in 12 hour format
 	setInterval(function () {
@@ -88,7 +64,10 @@ $("#" + events[i].time).children(".description").text(savedDescription);
 	});
 
 	//Delete session storage and all user text
+	var form = $(this).closest("form");
 	$("#reset-button").on("click", function () {
+		$(".document").val("");
 		localStorage.clear();
+
 	});
 });
