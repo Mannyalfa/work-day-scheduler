@@ -4,6 +4,7 @@ body {
 	line-height: 1;
 	font-weight: bold;
 	background-image: url("../images/circuit-board.jpg");
+	color: white;
 }
 
 .jumbotron {
@@ -103,8 +104,8 @@ textarea {
 	height: 79px;
 	margin-top: 0px;
 	background: transparent;
+	color: black;
 	resize: none;
-	color: #000000;
 	border-left: 1px solid black;
 	padding: 10px;
 }
@@ -112,7 +113,6 @@ textarea {
 .text-label {
 	background-color: rgb(20, 20, 20);
 	border: none;
-	color: white;
 	text-align: center;
 	padding-top: 10px;
 }
@@ -123,13 +123,11 @@ textarea {
 }
 
 .present {
-	background-color: #ff6961;
-	color: white;
+	background-color: #f7574e;
 }
 
 .future {
 	background-color: #77dd77;
-	color: white;
 }
 
 .saveBtn {
@@ -161,6 +159,10 @@ textarea {
 	text-align: center;
 	padding-top: 10px;
 	border-left: solid darkgray 1px;
+}
+
+.container {
+	color: white;
 }
 
 .reset-container {

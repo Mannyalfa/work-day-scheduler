@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/style/stylesheet.css" />
     <title>Work Day Scheduler</title>
   </head>
-
+    <!--set up header and clock-->
   <body>
     <header class="jumbotron">
       <h1 class="glitch">Work Day Scheduler</h1>
@@ -18,18 +18,18 @@
       <p id="currentDay" class="lead"></p>
       <p id="currentAlt" class="lead"></p>
       <div class="container">
-  
+  <!--button to toggle between 12 and 24 hour formats-->
         <button id="toggle">24 HOUR MODE</button>
       </div>
   </header>
-
+<!--label row-->
     <div class="container">
             <div id= label class="row marker">
               <p class= "col-1 time-label">HR</p>
               <p class="col-10 text-label">EVENT/APPOINTMENT DESCRIPTION</p>
               <p class="col-1 button-label ">SAVE</p>
             </div>
-
+            <!--list hours and time blocks-->
             <div id="9" class="row time-block">
               <p class= "col-1 ampm">9 AM</p>            
               <p class="col-1 mil">0900</p>
@@ -93,7 +93,9 @@
               <button class="btn saveBtn col-1 "><i class="fas fa-check"></i></button>
             </div>
         </div>
+    </div>  
 </main>
+<!--resets local storage and text boxes-->
 <div class="reset-container">
   <button id="reset-button">CLEAR ALL TASKS</button>
 </div>
