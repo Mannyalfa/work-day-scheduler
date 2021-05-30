@@ -35,3 +35,5 @@ Additional features: Background theme, Glitch effect title, 12/24-hour toggle mo
 GitHub URL:https://github.com/Mannyalfa/work-day-scheduler
 
 Deployed webpage URL:https://mannyalfa.github.io/work-day-scheduler/
+
+![screenshot](https://github.com/Mannyalfa/work-day-scheduler/blob/main/assets/images/screenshot.jpg)
