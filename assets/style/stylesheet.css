@@ -190,3 +190,58 @@ textarea {
 	color: red;
 	text-decoration: underline;
 }
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 768px) {
+
+
+h1{
+		font-size: 40px;
+}
+
+.lead{
+	font-size: 20px;
+}
+
+.time-label {
+	width: 100%;
+	font-size: 12px;
+	text-align: left;
+	padding: 10px;
+	}
+
+.text-label {
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+}
+
+.button-label {
+    font-size: 12px;
+	text-align: right;
+	padding: 10px;
+}
+
+.ampm {
+	font-size: 12px;
+	text-align: left;
+	padding: 10px;
+}
+
+.mil {
+	font-size: 12px;
+text-align: left;
+padding: 10px;
+}
+
+#warning{
+	font-size: 12px;
+}
+
+@media screen and (max-width: 575px) {
+	
+}
+
+.time-label .saveBtn {
+color: transparent;	}
+

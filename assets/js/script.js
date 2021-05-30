@@ -12,14 +12,14 @@ $(document).ready(function () {
 			for (j = 0; j < obj.length; j++) {
 				//checking if event time is equal to current time
 				if (obj[j].time == tmp) {
-					var storeId = "#" + i
+					var storeId = "#" + i;
 					//append event to text area (fills in "description")
 					$(storeId).children("textarea").append(obj[j].description);
 				}
 			}
 		}
 	}
-	//if loadstorage empty, load from storage
+	//if saved text fields empty, load from storage
 	if (loadStorage) {
 		loadEvents();
 	}
