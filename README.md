@@ -28,12 +28,14 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-Languages used: HTML, CSS, JavaScript JQuery BootStrap
+Languages used: HTML, CSS, JavaScript, JQuery, BootStrap
 
-Additional features: Background theme, Glitch effect title, 12/24-hour toggle mode, in-page reset button
+Additional features: Background theme, Glitch effect title, 12/24-hour toggle mode, in-application reset button, null input alert.
 
 GitHub URL:https://github.com/Mannyalfa/work-day-scheduler
 
 Deployed webpage URL:https://mannyalfa.github.io/work-day-scheduler/
 
 ![screenshot](https://github.com/Mannyalfa/work-day-scheduler/blob/main/assets/images/screenshot.jpg)
+
+![screenshot](https://github.com/Mannyalfa/work-day-scheduler/blob/main/assets/images/phonescreenshot.jpg)
