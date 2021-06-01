@@ -33,6 +33,9 @@ $(document).ready(function () {
 		localStorage.setItem("events", JSON.stringify(events));
 		console.log(events);
 		//empty field alert
+		if (text === "") {
+            alert("No information for this time-period: please schedule an event or appointment.");
+        }
 	});
 	//compare current time to block hours
 
